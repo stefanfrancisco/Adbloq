@@ -1,9 +1,10 @@
 <h3>Installation</h3>
 1. Verify GPU computing and CUDA compatibility of hardware
 
-lspci | grep -i nvidia
-uname -m && cat /etc/*release
- gcc --version
+<i>lspci | grep -i nvidia</i>
+<br>
+<i>uname -m && cat /etc/*release</i>
+<i> gcc --version</i>
 
 2. Install protobuf, leveldb, snappy, opencv, hdf5, protobuf, and boost
 
