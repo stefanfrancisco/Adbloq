@@ -24,35 +24,49 @@ sudo apt-get install --no-install-recommends libboost-all-dev
 <i>
 sudo apt-get install libatlas-base-dev
 </i>
-4. Other dependencies gflags glog lmdb
+<h4>4. Other dependencies gflags glog lmdb</h4>
 
 sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
 
-5. Install CUDA
-
+<h4>5. Install CUDA</h4>
+<i>
 wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/cuda-repo-ubuntu1404_6.5-14_amd64.deb
+<br>
 sudo dpkg -i cuda-repo-ubuntu1404_6.5-14_amd64.deb
+<br>
 sudo apt-get update
+<br>
 sudo apt-get install cuda
 
-6. Add the following to the .bashsrc file in your home folder
+<h4>6. Add the following to the .bashsrc file in your home folder</h4>
 
 export CUDA_HOME=/usr/local/cuda-7.5 
+<br>
 export LD_LIBRARY_PATH=${CUDA_HOME}/lib64 
  
 PATH=${CUDA_HOME}/bin:${PATH} 
+<br>
 export PATH 
 
-7.Install Anaconda
+<h4>7.Install Anaconda</h4>
 
-wget http://09c8d0b2229f813c1b93-c95ac804525aac4b6dba79b00b39d1d3.r79.cf1.rackcdn.com/Anaconda-2.1.0-Linux-x86_64.sh
+wget http://09c8d0b2229f813c1b93-c95ac804525aac4b6dba79b00b39d1d3.r79.cf1.rackcdn.com/
+<br>
+Anaconda-2.1.0-Linux-x86_64.sh
+<br>
 bash Anaconda-2.1.0-Linux-x86.sh
+<br>
 It will ask do you want to change the path? Say yes
 
-8. Install caffe
+<h4>8. Install caffe</h4>
 git clone 'https://www.github.com/BVLC/caffe'
+<br>
 cd caffe
+<br>
 cp Makefile.config.example Makefile.config
+<br>
 make all -j8
+<br>
 make test -j8
+<br>
 make runtest -j8
