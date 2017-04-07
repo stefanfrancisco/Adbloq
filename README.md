@@ -75,3 +75,22 @@ Python script *create_lmdb.py* is used to do the following:
 5. Store data into two databases: *train_lmdb* & *validation_lmdb*
 
 NOTE: A mean image of all of the data ensures each feature pixel has 0 mean.
+
+## Defining a Model
+*model_1_train* defines the model of our image classifier. It has been developed under the foundation of Jeff Donahue's CaffeNet.
+
+## Defining a Solver
+The solver is responsible in the guidelines of the training and validation of our model. 
+
+## Training the Model
+We have developed two training models. One model is trained upon the database of a wide variety of advertisements. The other is focused on a more specific advertisement: insurance. 
+
+#### Wide Variety Model
+This model consists of ____ positive images and ____ negative images.
+
+Validation Accuracy:
+
+#### Insurance Advertisement Model
+This model consists of ____ positive images and ____ negative images
+
+Validation Accuracy:
