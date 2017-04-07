@@ -1,17 +1,14 @@
-<style type="text/css">
-<!--
-.tab { margin-left: 40px; }
--->
-</style>
+
 
 <h3>Installation</h3>
-1. Verify GPU computing and CUDA compatibility of hardware
+<p>1. Verify GPU computing and CUDA compatibility of hardware 
 
-<p class = "tab"> <i>lspci | grep -i nvidia</i>
+<p><i>lspci | grep -i nvidia</i>
 <br>
 	<i>uname -m && cat /etc/*release</i>
 <br>
 	<i> gcc --version</i> </p>
+</p>
 
 2. Install protobuf, leveldb, snappy, opencv, hdf5, protobuf, and boost
 
