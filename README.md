@@ -1,4 +1,8 @@
+<h2>Introduction</h2>
+Adbloq utilizes Berkeley Vision Learning Caffe (BVLC) in order to detect and identify website advertisements. BVLC is responsible for creating the image classifier to determine what is and what is not an advertisement. 
 
+<h2>Contributors</h2>
+Stefan Francisco, Kevin Manan, Nathan Sanders, Thomas Stubblebine 
 
 <h2>Installation</h2>
 <h4>1. Verify GPU computing and CUDA compatibility of hardware </h4>
@@ -25,9 +29,9 @@ sudo apt-get install --no-install-recommends libboost-all-dev
 sudo apt-get install libatlas-base-dev
 </i>
 <h4>4. Other dependencies gflags glog lmdb</h4>
-
+<i>
 sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
-
+</i>
 <h4>5. Install CUDA</h4>
 <i>
 wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/cuda-repo-ubuntu1404_6.5-14_amd64.deb
