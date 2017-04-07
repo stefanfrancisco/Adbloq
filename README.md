@@ -2,7 +2,9 @@
 
 <h3>Installation</h3>
 1. Verify GPU computing and CUDA compatibility of hardware 
+
 <center>
+<br>
 <i>lspci | grep -i nvidia</i>
 <br>
 	<i>uname -m && cat /etc/*release</i>
