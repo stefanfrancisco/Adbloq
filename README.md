@@ -37,9 +37,9 @@ sudo dpkg -i cuda-repo-ubuntu1404_6.5-14_amd64.deb
 sudo apt-get update
 <br>
 sudo apt-get install cuda
-
+</i>
 <h4>6. Add the following to the .bashsrc file in your home folder</h4>
-
+<i>
 export CUDA_HOME=/usr/local/cuda-7.5 
 <br>
 export LD_LIBRARY_PATH=${CUDA_HOME}/lib64 
@@ -47,9 +47,9 @@ export LD_LIBRARY_PATH=${CUDA_HOME}/lib64
 PATH=${CUDA_HOME}/bin:${PATH} 
 <br>
 export PATH 
-
+</i>
 <h4>7.Install Anaconda</h4>
-
+<i>
 wget http://09c8d0b2229f813c1b93-c95ac804525aac4b6dba79b00b39d1d3.r79.cf1.rackcdn.com/
 <br>
 Anaconda-2.1.0-Linux-x86_64.sh
@@ -57,8 +57,9 @@ Anaconda-2.1.0-Linux-x86_64.sh
 bash Anaconda-2.1.0-Linux-x86.sh
 <br>
 It will ask do you want to change the path? Say yes
-
+</i>
 <h4>8. Install caffe</h4>
+<i>
 git clone 'https://www.github.com/BVLC/caffe'
 <br>
 cd caffe
@@ -70,3 +71,4 @@ make all -j8
 make test -j8
 <br>
 make runtest -j8
+</i>
