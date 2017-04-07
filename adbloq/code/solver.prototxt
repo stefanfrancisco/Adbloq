@@ -1,0 +1,14 @@
+net: "/home/rbruce/caffeV2/adbloq/code/train_val.prototxt"
+test_iter: 300
+test_interval: 1000
+base_lr: 0.001
+lr_policy: "step"
+gamma: 0.5
+stepsize: 2500
+display: 50
+max_iter: 20000
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 5000
+snapshot_prefix: "/home/rbruce/caffeV2/adbloq/snapshots/"
+solver_mode: GPU
