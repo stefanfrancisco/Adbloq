@@ -1,3 +1,4 @@
+#Installation
 0. Verify GPU computing and CUDA compatibility of hardware
 
 lspci | grep -i nvidia
