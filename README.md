@@ -1,12 +1,19 @@
 
 
 <h3>Installation</h3>
-1. Verify GPU computing and CUDA compatibility of hardware 
+<h4>1. Verify GPU computing and CUDA compatibility of hardware </h4>
+
+<p style="padding-left:50pt; padding-right:50pt;">
+<br>
+<i>lspci | grep -i nvidia</i>
+<br>
+	<i>uname -m && cat /etc/*release</i>
+<br>
+	<i> gcc --version</i> 
+</p>
 
 
-
-
-2. Install protobuf, leveldb, snappy, opencv, hdf5, protobuf, and boost
+<h4>2. Install protobuf, leveldb, snappy, opencv, hdf5, protobuf, and boost</h4>
 
 sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
 sudo apt-get install --no-install-recommends libboost-all-dev
