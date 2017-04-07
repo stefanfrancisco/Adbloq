@@ -3,23 +3,27 @@
 <h2>Installation</h2>
 <h4>1. Verify GPU computing and CUDA compatibility of hardware </h4>
 
-<i>lspci | grep -i nvidia</i>
+<i>
+lspci | grep -i nvidia
 <br>
-<i>uname -m && cat /etc/*release</i>
+uname -m && cat /etc/*release
 <br>
-<i> gcc --version</i> 
+ gcc --version
+ </i> 
 
 
 
 <h4>2. Install protobuf, leveldb, snappy, opencv, hdf5, protobuf, and boost</h4>
-
+<i>
 sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
+<br>
 sudo apt-get install --no-install-recommends libboost-all-dev
+</i>
 
-3. Install blas
-
+<h4>3. Install blas</h4>
+<i>
 sudo apt-get install libatlas-base-dev
-
+</i>
 4. Other dependencies gflags glog lmdb
 
 sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
