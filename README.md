@@ -63,4 +63,15 @@ make runtest -j8
 ```
 ## Creating a Database
 #### Gathering Images
+A python script is developed by Kevin Manan that automates the image mining process. Another  script was developed to recursively rename images in a format required by LMDB.
 #### Creating an LMDB Database
+Python script *create_lmdb.py* is used to do the following:
+1. Equalization of all 3 color channels
+2. Resizing to 224x224
+3. Divide training data into two sets:
+	- 5/6 of the images will be used for training.
+	- The remaining 1/6 of the images will be used for validation.
+4. Each of the images will have a label: 0 if it is a negative image, 1 if it is a positive image.
+5. Store data into two databases: *train_lmdb* & *validation_lmdb*
+
+NOTE: A mean image of all of the data ensures each feature pixel has 0 mean.
