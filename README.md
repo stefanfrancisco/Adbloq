@@ -2,7 +2,9 @@
 Adbloq utilizes Berkeley Vision Learning Caffe (BVLC) in order to detect and identify website advertisements. BVLC is responsible for creating the image classifier to determine what is and what is not an advertisement. 
 
 <h2>Contributors</h2>
-Stefan Francisco, Kevin Manan, Nathan Sanders, Thomas Stubblebine 
+Stefan Francisco, Kevin Manan, Nathan Sanders, Thomas Stubblebine
+<br>
+With advice from Professor Robert Bruce 
 
 <h2>Installation</h2>
 <h4>1. Verify GPU computing and CUDA compatibility of hardware </h4>
