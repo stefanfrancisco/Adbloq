@@ -1,9 +1,10 @@
+<style> .indented { padding-left: 50pt; padding-right: 50pt; } </style> 
 
 
 <h3>Installation</h3>
 1. Verify GPU computing and CUDA compatibility of hardware 
 
-<p align = center>
+<p class="indented">
 <br>
 <i>lspci | grep -i nvidia</i>
 <br>
