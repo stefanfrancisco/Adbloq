@@ -1,4 +1,4 @@
-<h1>Adbloq</h1>
+<h1><p align="center">Adbloq</p></h1>
 <h2>Abstract</h2>
 Adbloq utilizes Berkeley Vision Learning Caffe (BVLC) in order to detect and identify website advertisements. BVLC is responsible for creating the image classifier to determine what is and what is not an advertisement. 
 
