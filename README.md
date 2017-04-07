@@ -23,11 +23,10 @@ uname -m && cat /etc/*release
 
 
 <h4>2. Install protobuf, leveldb, snappy, opencv, hdf5, protobuf, and boost</h4>
-<i>
+'''
 sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
-<br>
-sudo apt-get install --no-install-recommends libboost-all-dev
-</i>
+'''
+
 
 <h4>3. Install blas</h4>
 <i>
@@ -81,8 +80,8 @@ make test -j8
 <br>
 make runtest -j8
 </i>
-<h4>Creating Database</h4>
-<u>Gathering Images</u>
+<h2>Creating Database</h2>
+<h4>Gathering Images</h4>
 A python script is developed by Kevin Manan that automates the image mining process. Another  script was developed to recursively rename images in a format required by LMDB.
 <u>Creating an LMDB database</u>
 Python script <i>create_lmdb.py</i> is used to do the following:
