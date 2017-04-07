@@ -7,6 +7,8 @@ Stefan Francisco, Kevin Manan, Nathan Sanders, Thomas Stubblebine
 <br>
 With advice from Professor Robert Bruce 
 
+<h2>Dependencies</h2>
+
 <h2>Installation</h2>
 <h4>1. Verify GPU computing and CUDA compatibility of hardware </h4>
 
@@ -79,3 +81,18 @@ make test -j8
 <br>
 make runtest -j8
 </i>
+<h4>Creating Database</h4>
+<u>Gathering Images</u>
+A python script is developed by Kevin Manan that automates the image mining process. Another  script was developed to recursively rename images in a format required by LMDB.
+<u>Creating an LMDB database</u>
+Python script <i>create_lmdb.py</i> is used to do the following:
+<br>
+1. Equalization of all 3 color channels
+2. Resizing to 224x224
+3. Divide training data into two sets:
+	- 5/6 of the images will be used for training.
+	- The remaining 1/6 of the images will be used for validation.
+4. Each of the images will have a label: 0 if it is a negative image, 1 if it is a positive image.
+5. Store data into two databases: <i>train_lmdb</i> & <i>validation_lmdb</i>
+<br>
+A mean image of all of the data ensures each feature pixel has 0 mean.
