@@ -86,11 +86,19 @@ The solver is responsible in the guidelines of the training and validation of ou
 We have developed two training models. One model is trained upon the database of a wide variety of advertisements. The other is focused on a more specific advertisement: insurance. 
 
 #### Wide Variety Model
-This model consists of ____ positive images and ____ negative images.
+This model consists of 1200 positive images and 1800 negative images.
 
-Validation Accuracy:
+Validation Accuracy: 86%
 
 #### Insurance Advertisement Model
-This model consists of ____ positive images and ____ negative images
+This model consists of 400 positive images and 3300 negative images
 
-Validation Accuracy:
+Validation Accuracy: 80% 
+
+#### Hypothesis
+Although it seems the wide variety model is more accurate than the insurance advertisement model, there are a couple of factors that will affect the model's accuracy in real time:
+
+1. The negative images in the wide variety model does not consist of any advertisements. The model is more tuned strictly whether it is an advertisement vs it is not an advertisement.
+2. The insurance advertisement model is fine-tuned in a website advertisement genre. As a result, negative images contain advertisements that are unrelated to insurance. This will provide more data in long term, when adding additional genres to the model. 
+
+Therefore, in real time, the insurance advertisement model is a more approachable idea in filtering advertisements due to it's specific range of real-time advertisement possibilities. 
