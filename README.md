@@ -1,13 +1,39 @@
 # Adbloq
 ## Abstract
 Adbloq utilizes Berkeley Vision Learning Caffe (BVLC) in order to detect and identify website advertisements. BVLC is responsible for creating the image classifier to determine what is and what is not an advertisement. 
+
+The convnet is demonstrated by use of a proxy server, but it could be placed anywhere in a network between the client and an ad-insertion server.
+
+Specifically, we use Squid3 as a proxy server in conjunction with the ICAP protocol to host our convnet.
+
+Squid3 has the capability to act as an ICAP Client, so we created an ICAP server that handled the classification of responses containing images. The server would forward images that failed classification, and send a transparent image of similar resolution if it was identified as an ad.
+
 ## Contributors
 Stefan Francisco, Kevin Manan, Thomas Stubblebine, Nathan Sanders
 
 Advisor: Prof. Robert Bruce
 ## Dependencies
 
-## Installation
+The system was tested on an Ubuntu 14.04 distribution, using distro packages for squid3 and PyPI packages for PyICAP and Python-Magic.
+
+### Squid3
+
+```
+sudo apt-get install squid3
+```
+
+### PyICAP
+
+```
+pip install pyicap
+```
+
+### Python Magic
+```
+pip install python-magic
+```
+
+## Caffe Installation
 Verify GPU computing and CUDA compatibility of hardware.
 ```
 lspci | grep -i nvidia
@@ -102,3 +128,33 @@ Although it seems the wide variety model is more accurate than the insurance adv
 2. The insurance advertisement model is fine-tuned in a website advertisement genre. As a result, negative images contain advertisements that are unrelated to insurance. This will provide more data in long term, when adding additional genres to the model. 
 
 Therefore, in real time, the insurance advertisement model is a more approachable idea in filtering advertisements due to it's specific range of real-time advertisement possibilities. 
+
+
+## Configuring Squid
+
+These lines refer to modifying the file /etc/squid3/squid.conf
+
+First, define the network your clients will be connecting from.
+```
+acl sjsu src 130.65.0.0/16  # San Jose State University network
+```
+
+Allow proxy access to clients:
+```
+http_access allow sjsu
+```
+
+Enable Squid ICAP client:
+```
+icap_enable on
+```
+
+Register ICAP service:
+```
+icap_service adbloq respmod_precache icap://localhost:13440/example
+```
+In this instance, adbloq is the name of the service, internal to squid.
+respmod_precache indicates that responses should be sent to the ICAP server before being cached.
+The ICAP URI indicates the server:port of your ICAP server, example is the ICAP method.
+
+Squid should begin heartbeating with your ICAP server shortly!
